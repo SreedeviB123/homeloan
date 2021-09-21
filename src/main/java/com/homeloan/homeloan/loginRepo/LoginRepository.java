@@ -1,0 +1,11 @@
+package com.homeloan.homeloan.loginRepo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import com.homeloan.homeloan.loginDomain.Login;
+
+@Repository
+public interface LoginRepository extends JpaRepository<Login, Long>{
+	Login findByUsernameAndPassword(String username, String password);
+ 
+}
